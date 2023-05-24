@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anagram Finder</title>
+  </head>
+  <body>
+    <label for="input">Enter a string: </label>
+    <input type="text" id="input">
+    <button onclick="findAnagram()">Find Anagram</button>
+    <p id="output"></p>
+    <script>
+      function findAnagram() {
+        const input = document.getElementById("input").value;
+        fetch('names.json')
+          .then(response => response.json())
+          .then(data => {
+            let found = false;
+            for (let i = 0; i < data.length; i++) {
+              if (input.length === data[i].length && 
+                  input.toLowerCase().split("").sort().join("") === 
+                  data[i].toLowerCase().split("").sort().join("")) {
+                found = true;
+                document.getElementById("output").innerHTML = 
+                  `${input} is an anagram of ${data[i]}.`;
+                break;
+              }
+            }
+            if (!found) {
+              document.getElementById("output").innerHTML = 
+                `No anagram of ${input} was found in the file.`;
+            }
+          })
+          .catch(error => console.error(error));
+      }
+    </script>
+  </body>
+</html>
