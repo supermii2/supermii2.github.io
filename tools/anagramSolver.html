@@ -11,22 +11,26 @@
     <script>
       function findAnagram() {
         const input = document.getElementById("input").value;
-        const terms = ['listen', 'silent', 'enlist'];
-        let found = false;
-        for (let i = 0; i < terms.length; i++) {
-          if (input.length === terms[i].length && 
-              input.toLowerCase().split("").sort().join("") === 
-              terms[i].toLowerCase().split("").sort().join("")) {
-            found = true;
-            document.getElementById("output").innerHTML = 
-              `${input} is an anagram of ${terms[i]}.`;
-            break;
-          }
-        }
-        if (!found) {
-          document.getElementById("output").innerHTML = 
-            `No anagram of ${input} was found in the file.`;
-        }
+        fetch('names.json')
+          .then(response => response.json())
+          .then(data => {
+            let found = false;
+            for (let i = 0; i < data.length; i++) {
+              if (input.length === data[i].length && 
+                  input.toLowerCase().split("").sort().join("") === 
+                  data[i].toLowerCase().split("").sort().join("")) {
+                found = true;
+                document.getElementById("output").innerHTML = 
+                  `${input} is an anagram of ${data[i]}.`;
+                break;
+              }
+            }
+            if (!found) {
+              document.getElementById("output").innerHTML = 
+                `No anagram of ${input} was found in the file.`;
+            }
+          })
+          .catch(error => console.error(error));
       }
     </script>
   </body>
