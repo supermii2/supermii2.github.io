@@ -20,7 +20,7 @@ function runAnagramCheck() {
     .then(x => anagramCheck(stringToObject(input), x, n))
     .then(x => {
       var current = document.getElementById("output").innerHTML;
-      var nextOne = `${current} ${input} is an anagram of ${names.join(" and ")}.\n`;
+      var nextOne = `${current} ${input} is an anagram of ${x.join(" and ")}.\n`;
       document.getElementById("output").innerHTML = nextOne;
     });
 
