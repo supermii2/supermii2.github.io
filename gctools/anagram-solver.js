@@ -7,8 +7,8 @@ function runAnagramCheck() {
 
 
     if (document.getElementById("pokemon").checked) names.push('pokemon.json');
-    if (document.getElementById("moves").checked) names.push('moves.json');
-    if (document.getElementById("abilities").checked) names.push('abilities.json');
+    //if (document.getElementById("moves").checked) names.push('moves.json');
+    //if (document.getElementById("abilities").checked) names.push('abilities.json');
     
     document.getElementById("output").innerHTML = "";
 
