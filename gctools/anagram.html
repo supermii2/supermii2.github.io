@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anagram Finder</title>
+  </head>
+  <body>
+    <label for="input">Enter a string: </label>
+    <input type="text" id="input">
+    <br><br>
+    <label for="input_n">Enter number of terms: </label>
+    <input type="number" id="input_n" value="1" min="1" step="1">
+    <br><br>
+    <input type="checkbox" id="pokemon" name="pokemon">
+    <label for="pokemon">Pokemon Names</label>
+    <input type="checkbox" id="moves" name="moves">
+    <label for="moves">Moves Names</label>
+    <input type="checkbox" id="abilities" name="abilities">
+    <label for="abilities">Abilities Names</label>    
+    <br><br>
+    <button onclick="checkAnagram()">Check Anagram</button>
+    <p id="output"></p>
+    <script src="anagram-solver.js"></script>
+  </body>
+</html>
