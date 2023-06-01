@@ -12,11 +12,21 @@ function runAnagramCheck() {
 
     document.getElementById("output").innerHTML = "hi";
 
+    names.map(x => fetch(x));
+
+    Promise.all(names)
+    .then(x => x.flat())
+    .then(x => x.map(y => stringToObject(y)))
+    .then(x => anagramCheck(stringToObject(input), x, n))
+    .then(x => x.map(y => y.join(" and ")))
+    .then(x => x.join("\n"))
+    .then(x => {
+        document.getElementById("output").innerHTML = x
+    });
+
 
     function stringToObject(s) {
         var returnObj = {};
-
-
         for (let index = 0; index < chars.length; index++) {
             returnObj[chars[index]] = 0;
         }
