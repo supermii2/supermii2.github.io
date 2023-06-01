@@ -10,25 +10,7 @@ function runAnagramCheck() {
     //if (document.getElementById("moves").checked) names.push('moves.json');
     //if (document.getElementById("abilities").checked) names.push('abilities.json');
 
-    document.getElementById("output").innerHTML = "";
-
-    const requests = names.map(x => fetch(x));
-    Promise.all(requests)
-        .then(x => x.map(y => y.json()))
-        .then(x => x.flat())
-        .then(x => {
-            document.getElementById("output").innerHTML = x
-        });
-
-
-
-
-
-
-
-
-
-
+    document.getElementById("output").innerHTML = "hi";
 
 
     function stringToObject(s) {
