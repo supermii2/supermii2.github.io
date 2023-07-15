@@ -1,5 +1,5 @@
 function runPortCheck() {
-    const input = document.getElementById("input").value.toLowerCase().replace("-", "").replace(" ", "");
+    const input = document.getElementById("input").value.toLowerCase().replace("-", "").replace(/\s/g, '');
     const overlap = document.getElementById("overlap").value;
     var inputs = input.split("|").map(line => line.split(","));
 
