@@ -1,6 +1,6 @@
-function runSquaredleSolver() {
-    // GET SQUAREDLE BOARD
-    const board = document.getElementById("output").innerHTML
+function runSquaredleSolver(wordList) {
+   
+    const board = document.getElementById("input").innerHTML;
     function solveBoard(wordList, board) {
         function parseSquaredleBoard(boardString) {
             if (boardString == "") {
@@ -82,12 +82,14 @@ function runSquaredleSolver() {
         }
         solveBoard();
         const output = Array.from(answers).sort().join(", ")
+        if (output == "") {
+            output = "No answers found";
+        }
         return output;
     }
-    fetch("output.json")
-    .then(data => solveBoard(data, board))
-    .then(data => {
-        const outputElement = document.getElementById('output');
-        outputElement.textContent = data;
-      });
+
+    var answer = solveBoard(wordList, board);
+    document.getElementById("output").innerHTML = answer;
+    return;
 }
+

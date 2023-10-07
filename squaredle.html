@@ -4,12 +4,17 @@
     <title>Squaredle Solver</title>
   </head>
   <body>
+    <script src="wordlist.js"></script>
     <script src="squaredle.js"></script>
     <label for="input">Input Grid</label>
     <br>
     <textarea name="input" cols="40" rows="10" id="input"></textarea>
     <br><br>
-    <button onclick="runSquaredleSolver()">Solve</button>
+    <button onclick="handleClick()">Solve</button>
     <p id="output"></p>
+    <script>function handleClick() {
+      runSquaredleSolver(wordList);
+    }</script>
   </body>
 </html>
+
