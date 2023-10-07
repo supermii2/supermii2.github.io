@@ -1,11 +1,11 @@
 function runSquaredleSolver(wordList) {
    
-    const board = document.getElementById("input").innerHTML;
+    const board = document.getElementById("input").value;
     function solveBoard(wordList, board) {
+        if (board == "") {
+            return "No answers found";
+        }
         function parseSquaredleBoard(boardString) {
-            if (boardString == "") {
-                return [];
-            }
             var parsedBoard = [];
             var currentRow = [];
             for (let i = 0; i < boardString.length; i++) {
@@ -81,7 +81,7 @@ function runSquaredleSolver(wordList) {
             }
         }
         solveBoard();
-        const output = Array.from(answers).sort().join(", ")
+        var output = Array.from(answers).sort().join(", ")
         if (output == "") {
             output = "No answers found";
         }
