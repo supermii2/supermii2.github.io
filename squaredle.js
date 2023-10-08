@@ -1,5 +1,5 @@
 function runSquaredleSolver(wordList) {
-    const board = document.getElementById("input").value.toLowerCase();
+    const board = document.getElementById("input").value.toLowerCase().trimEnd();
     function solveBoard(wordList, board) {
         if (board == "") {
             return "No answers found";
