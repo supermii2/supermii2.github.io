@@ -1,6 +1,5 @@
 function runSquaredleSolver(wordList) {
-   
-    const board = document.getElementById("input").value;
+    const board = document.getElementById("input").value.toLowerCase();
     function solveBoard(wordList, board) {
         if (board == "") {
             return "No answers found";
@@ -8,15 +7,27 @@ function runSquaredleSolver(wordList) {
         function parseSquaredleBoard(boardString) {
             var parsedBoard = [];
             var currentRow = [];
+            var maxRowSize = 0;
+            var currentRowSize = 0;
             for (let i = 0; i < boardString.length; i++) {
                 if (boardString[i] == "\n") {
                     parsedBoard.push(currentRow);
                     currentRow = []
+                    if (currentRowSize > maxRowSize) maxRowSize = currentRowSize;
+                    currentRowSize = 0;
                 } else {
                     currentRow.push(boardString[i])
+                    currentRowSize++;
                 }
             }
             parsedBoard.push(currentRow);
+
+            for (let i = 0; i < parsedBoard.length; i++) {
+                var spacesToAdd = maxRowSize - parsedBoard[i].length;
+                for (let j = 0; j < spacesToAdd; j++) {
+                    parsedBoard[i].push(" ");
+                }
+            }
             return parsedBoard;
         }
 
@@ -53,6 +64,9 @@ function runSquaredleSolver(wordList) {
             return curr_x >= 0 && curr_x < length && curr_y >=0 && curr_y < height;
         }
         function DFS(board, visited, currentNode, currentWord, length, height, curr_x, curr_y) {
+            if(currentNode == undefined) {
+                return;
+            }
             if (currentNode.hasOwnProperty("isEnd") && currentWord.length >= MIN_WORD_SIZE) {
                 answers.add(currentWord);
             }
