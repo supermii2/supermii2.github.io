@@ -2,45 +2,15 @@
 <html>
 <head>
   <title>HTML Page with Menu Bar</title>
-  <style>
-    ul.menu {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #f1f1f1;
-      text-align: center;
-    }
-
-    ul.menu li {
-      display: inline-block;
-    }
-
-    ul.menu li a {
-      display: block;
-      color: #333;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    ul.menu li a:hover {
-      background-color: #ddd;
-    }
-
-    div.centered-text {
-      text-align: center;
-    }
-  </style>
+  <link type="text/css" rel="stylesheet" href="stylesheets/base.css">
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Tools</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-  <div class="centered-text">
+  <nav class="center">
+    <a href="/">Home</a>
+    <a href="./contact.html">Contact</a>
+    <a href="./tools/tools.html">Tools</a>
+  </nav>
+  <article class="page">
     <h1>Tools (and other webtoys)</h1>
     <p>This page is a repository for tools and other webtoys I've created!</p>
     <h3>Puzzle Solvers:</h3>
@@ -48,6 +18,6 @@
     <h3>Pokemon Showdown Tools</h3>
     <a href = "./pstools/anagram.html">Anagram Solver</a><br>
     <a href = "./pstools/port.html">Portmanteau Solver</a>
-  </div>
+  </article>
 </body>
 </html>

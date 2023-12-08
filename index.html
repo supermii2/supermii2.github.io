@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HTML Page with Menu Bar</title>
-  <style>
-    ul.menu {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #f1f1f1;
-      text-align: center;
-    }
-
-    ul.menu li {
-      display: inline-block;
-    }
-
-    ul.menu li a {
-      display: block;
-      color: #333;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    ul.menu li a:hover {
-      background-color: #ddd;
-    }
-
-    div.centered-text {
-      text-align: center;
-    }
-  </style>
+  <title>Home Page for Alvis</title>
+  <link type="text/css" rel="stylesheet" href="stylesheets/base.css">
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="./tools/tools.html">Tools</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-  <div class="centered-text">
-    <h1>This is a landing page for Alvis!!!</h1>
-    <h2>(it's still under construction)</h2>
-  </div>
+  <nav class="center">
+    <a href="/">Home</a>
+    <a href="./contact.html">Contact</a>
+    <a href="./tools/tools.html">Tools</a>
+  </nav>
+   <article class="page">
+    <h1>Welcome to Alvis' landing page!</h1>
+    <h2>About</h2>
+    <p>Hi! I'm a Bachelor of Computer Science currently studying as an undergraduate in the National University of Singapore!
+      In my free time, I enjoy solving crossword puzzles and going down random Wikipedia rabbit holes. 
+      Here are some things you might know me from!</p>
+
+    <h3>Super Smash Bros.</h3>
+    <p>I used to compete in Super Smash Bros. Ultimate and Super Smash Bros. for Wii U under the tag <a href="https://www.ssbwiki.com/Smasher:PsineWave">PsineWave</a>.
+      Though I have since retired from the competition to focus on under pursuits, I still maintain an active presence as a 
+      tournament co-ordinator and organiser, working with *SCAPE with the SmashG team for the past two years.
+      If you're interested in competing in in-person events, join <a href="https://discord.com/invite/qm3gYdx">our Discord server</a> for updates!
+    </p>
+
+    <h3>Pokemon Showdown</h3>
+    <p>I'm an active writer for the <a href="https://play.pokemonshowdown.com/scavengers">scavengers room</a> for Pokemon Showdown, writing puzzles and trivia questions for the room.
+    </p>
+
+    
+    <h2>Projects</h2>
+    <p>Here are some projects I've worked on or are working on! Check out my ideas page for what else I'm thinking about.</p>
+    <h3>Year of Clubhouse Games in JavaScript</h3>
+    <p>Planned project to implement all games from Clubhouse Games: 51 Worldwide Classics in JavaScript as practice.</p>
+
+    <h3>Start Bot</h3>
+    <p>On-going project to allow users to interact with Start.GG and report sets using Discord. Still in early development.
+      <a href="https://github.com/supermii2/startbot">Link</a>
+    </p>
+
+    <h3>Island Showdown</h3>
+    <p>Multiplayer battle arena game created as part of NUS GDG GameJam 2022! <a href="https://thecatinbox.itch.io/island-showdown">Link</a></p>
+
+   </article>
 </body>
 </html>
