@@ -19,13 +19,13 @@
      *
      * Note the full font is also defined in the media queries below.
      */
-    --font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+    --font: 16px/180% 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
   }
   
   /* Properties for screens that are narrower than the body width. */
   @media (max-width: 54rem) {
     :root {
-      --font: 14px/160% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+      --font: 14px/160% 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
   
       --pad-x: 1rem;    /* Modest amount of padding to prevent wasting screen space. */
       --pad-y: .5rem;
@@ -35,7 +35,7 @@
   /* Even smaller screens, mostly mobile phones. */
   @media (max-width: 26rem) {
     :root {
-      --font: 14px/140% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+      --font: 14px/140% 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
     }
   }
   

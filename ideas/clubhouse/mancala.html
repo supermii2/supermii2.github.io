@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mancala Page</title>
+  <link type="text/css" rel="stylesheet" href="../../stylesheets/base.css">
+  <style>
+    .mancala td {
+        border: 1.5px solid #000000;
+		text-align: center;
+		vertical-align: middle;
+    }
+    .mancala td:hover {
+        background-color: #ff0000;
+        color: #000000;
+    }
+    .mancala p {
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav class="center">
+    <a href="/">Home</a>
+  </nav>
+   <article class="page">
+    <h1>Mancala</h1>
+        <p></p>
+        <div class="mancala">
+            <p></p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" id="bStorage">0</td>
+                        <td id="b5" onmousedown="tryToPlayMove(1, 5)"></td>
+                        <td id="b4" onmousedown="tryToPlayMove(1, 4)"></td>
+                        <td id="b3" onmousedown="tryToPlayMove(1, 3)"></td>
+                        <td id="b2" onmousedown="tryToPlayMove(1, 2)"></td>
+                        <td id="b1" onmousedown="tryToPlayMove(1, 1)"></td>
+                        <td id="b0" onmousedown="tryToPlayMove(1, 0)"></td>
+                        <td rowspan="2" id="aStorage">0</td>
+                    </tr>
+                    <tr>
+                        <td id="a0" onmousedown="tryToPlayMove(0, 0)"></td>
+                        <td id="a1" onmousedown="tryToPlayMove(0, 1)"></td>
+                        <td id="a2" onmousedown="tryToPlayMove(0, 2)"></td>
+                        <td id="a3" onmousedown="tryToPlayMove(0, 3)"></td>
+                        <td id="a4" onmousedown="tryToPlayMove(0, 4)"></td>
+                        <td id="a5" onmousedown="tryToPlayMove(0, 5)"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="info"></p>
+        </div>
+    </article>
+    <script src="./source/mancala.js"></script>
+</body>
+</html>
